@@ -1,0 +1,287 @@
+body{
+    background-color: #fff;
+}
+/* .dilog{
+    width: 947px;
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    top: 0px;
+    left: 129px;
+    z-index: 2;
+    background-color: teal;
+    border: 4px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 3px 10px #ccc;
+}
+.dilogTitle{
+    height: 31px;
+    line-height: 31px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-family: "Microsoft YaHei";
+    position: relative;
+} */
+header{
+    height: 110px;
+    background-color: rosybrown;
+    background: url("../images/register/headbg.jpg") repeat-x left bottom;
+}
+.logoTab{
+    display: block;
+}
+.logoImg{
+    width: 160px;
+    height: 50px;
+    float: left;
+    margin-top: 24px;
+    background: url("../images/register/icon.png") no-repeat;
+}
+.logoTitle{
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    font-size: 24px;
+    color: #333;
+    margin-top: 34px;
+}
+.hasAccount{
+    float: right;
+    font-size: 16px;
+    color: #999;
+    margin-top: 55px;
+}
+.hasAccount a{
+    color: #e22;
+    font-size: 16px;
+}
+/* 注册步骤 */
+.registerTab{
+    width: 400px;
+    margin: 80px auto 0;
+    position: relative;
+}
+.step{
+    text-align: center;
+}
+.stepNum{
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 18px;
+}
+.stepText{
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+}
+/* 1 */
+.stepOneNum{
+    background: url("../images/register/reg-icon.png") no-repeat 0 -200px;
+}
+.stepTextOne{
+    color: #3b4;
+}
+/* 2、3 */
+.stepTwoNum,.stepThreeNum{
+    color: #ccc;
+    background: url("../images/register/reg-icon.png") no-repeat -45px -200px;
+}
+.stepTwoLocation{
+    margin-left: 106px;
+}
+.stepThreeLocation{
+    margin-left: 112px;
+}
+.stepTextTwo,.stepTextThree{
+    color: #ccc;
+}
+/* 虚线 */
+.dottedLine{
+    width: 124px;
+    height: 10px;
+    background: url("../images/register/reg-icon.png") no-repeat 0 -40px;
+    background-position: 0 -100px;
+    position: absolute;
+    left: 55px;
+    top: 7px;
+}
+.dottedLineTwo{
+    position: absolute;
+    left: 228px;
+    top: 7px;
+}
+/* 注册操作 */
+main{
+    margin: 50px auto 186px;
+    width: 400px;
+    height: 200px;
+}
+.countryTab{
+    height: 86px;
+    position: relative;
+}
+.countryNum{
+    display: block;
+    width: 398px;
+    height: 52px;
+    border: none;
+    margin-bottom: 30px;
+    position: relative;
+}
+/* 选择国家 */
+.selectCountry{
+    width: 87px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    padding-left: 20px;
+    color: #666;
+    cursor: pointer;
+    border: 1px solid rgb(221, 221, 221);
+}
+.moreCountry{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 5px;
+    background: url("../images/register/icon.png") no-repeat -2px -150px;
+}
+.inputWrap{
+    width: 286px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 46px;
+    font-family: Arial;
+    color: rgb(204, 204, 204);
+    border: 1px solid rgb(221, 221, 221);
+    border-left: none;
+}
+.phoneNumInput{
+    width: 190px;
+    height: 19px;
+    font-size: 14px;
+    padding: 16px 0 11px 20px;
+    border: none;
+    outline-style: none;
+}
+.verify{
+    width: 396px;
+    height: 52px;
+    font-size: 14px;
+    color: #333;
+    line-height: 52px;
+    text-align: center;
+    cursor: pointer;
+    border: solid 1px #ddd;
+    margin-bottom: 50px;
+    position: relative;
+}
+/* 下一步 */
+.nextStep{
+    width: 398px;
+    height: 54px;
+    font-size: 16px;
+    line-height: 54px;
+    color: #fff;
+    text-align: center;
+    background: #e2231a;
+    font-family: "Microsoft YaHei","Hiragino Sans GB";
+    cursor: pointer;
+    border: 0;
+}
+/* 其他登录方式 */
+.otherRegisterWay{
+    width: 396px;
+    margin-top: 28px;
+    color: #333;
+}
+.otherWayItem{
+    font-size: 14px;
+    cursor: pointer;
+}
+.otherWayCom{
+    display: inline-block;
+    margin: 0 8px 2px 0;
+    vertical-align: middle;
+    width: 26px;
+    height: 26px;
+}
+.companyRegister{
+    background: url("../images/register/reg-icon.png") no-repeat 0 -160px;
+}
+.abrodRegister{
+    background: url("../images/register/reg-icon.png") no-repeat -40px -160px;
+}
+/* 第一步提示信息 */
+.verifyTips{
+    position: absolute;
+    top: 30px;
+    margin-top: 22px;
+    font-size: 12px;
+    color: #ccc;
+    display: none;
+}
+.verifyTips i{
+    display: block;
+    width: 17px;
+    height: 18px;
+    margin-right: 10px;
+    background: url("../images/register/icon.png") no-repeat 0 -98px;
+}
+.verifyText{
+    height: 20px;
+    line-height: 20px;
+}
+/* 设置密码 */
+.passwordWrap{
+    height: 86px;
+    position: relative;
+}
+.passwordTab{
+    display: block;
+    width: 398px;
+    height: 52px;
+    border: none;
+    margin-bottom: 30px;
+    position: relative;
+}
+.passwordLabel{
+    width: 87px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    padding-left: 20px;
+    color: #666;
+    cursor: pointer;
+    border: 1px solid rgb(221, 221, 221);
+}
+.password{
+    width: 190px;
+    height: 19px;
+    font-size: 14px;
+    padding: 16px 0 11px 20px;
+    border: none;
+    outline-style: none;
+}
+/* 确认键 */
+.submitBtn{
+    width: 398px;
+    height: 54px;
+    font-size: 16px;
+    line-height: 54px;
+    color: #fff;
+    text-align: center;
+    background: #e2231a;
+    font-family: "Microsoft YaHei","Hiragino Sans GB";
+    cursor: pointer;
+    border: 0;
+    outline-style: none;
+}

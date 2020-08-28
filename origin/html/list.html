@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../resource/css/Common.css">
+    <link rel="stylesheet" href="../resource/css/footerCommon.css">
+</head>
+<body>
+    <div id="header" class="">
+        <div class="container">
+            <h1>商品列表</h1>
+        </div>
+    </div>
+    <div id="content" class="">
+        <div class="container" id="paginationContainer">
+
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <div class="footerBox">
+                <div class="linkBox">
+                    <a href="../index.html">关于我们</a>
+                    <span class="line">|</span>
+                    <a href="../index.html">联系我们</a>
+                    <span class="line">|</span>
+                    <a href="#">人才招聘</a>
+                    <span class="line">|</span>
+                    <a href="#">商家入驻</a>
+                    <span class="line">|</span>
+                    <a href="#">广告服务</a>
+                    <span class="line">|</span>
+                    <a href="#">手机京东</a>
+                    <span class="line">|</span>
+                    <a href="#">友情链接</a>
+                    <span class="line">|</span>
+                    <a href="#">销售联盟</a>
+                    <span class="line">|</span>
+                    <a href="#">京东社区</a>
+                    <span class="line">|</span>
+                    <a href="#">京东公益</a>
+                    <span class="line">|</span>
+                    <a href="#">English Site</a>
+                </div>
+                <div class="copyrigthtBox">
+                    Copyright&nbsp;&nbsp;&copy;2004-2020&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/request.js"></script>
+    <script src="../js/Pagination.js"></script>
+    <script src="../js/cookieCheck.js"></script>
+
+    <script>
+        ;(function(){
+            var goodsArr=[];
+            // 获取元素
+            var paginationContainer=document.getElementById("paginationContainer");
+            // 发送Ajax请求服务器上的数据，渲染页面
+            request.pGet("../php/getGoods.php",{})
+            .then((data)=>{
+                if(!data.error){
+                    goodsArr=data.msg;
+                    var p=new Pagination(paginationContainer,data.msg,0,12);
+                    p.display(function(arr){
+                        console.log(arr);
+                        // 渲染数据
+                        var str=`<ul style="width:100%" class="row wrap-column list-group list-group-horizontal-sm">`;
+                        // 循环得到li
+                        arr.forEach(value=>{
+                            str+=`
+                                <li class="col col-4 list-group-item" style="padding: 0 10px; border: none">
+                                    <div class="card">
+                                        <img src="${value.goods_small_logo}" class="card-img-top" alt="...">
+                                        <div class="card-bdy">
+                                            <p class="card-text"><a href="./detail.html?id=${value.goods_id}">${value.goods_name}</a></p>
+                                            <p class="d-flex justify-content-between align-items-center card-text"><span>￥${value.goods_price}</span><button type="button" data_id="${value.goods_id}" class="btn btn-primary">加入购物车</button></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            `;
+                        });
+                        str+=`</ul>`;
+                        return str;
+                    });
+                }else{
+                    throw new Error("请求失败");
+                }
+            })
+            .catch((err)=>{
+                console.log(err);
+            });
+             // 使用事件委托给所有的加入购物车按钮添加点击事件
+            paginationContainer.onclick=function(e){
+                // 通过e.target判定触发事件的元素是否是加入购物车按钮
+                if(e.target.tagName.toLowerCase()==="button"){
+                    var goodsID=e.target.getAttribute("data-id");
+                    // 点到的按钮
+                    console.log("当前点的是按钮，商品id是"+goodsID);
+                    // 查询数组
+                    var goodsInfo=goodsArr.find((value)=>{
+                        return value.goods_id===goodsID;
+                    });
+                    // 1、取出本地存储中的数据
+                    var shoppingCartString=localStorage.getItem("shoppingCart")||"[]";
+                    // 2、转为数组
+                    var shoppingCartArr=JSON.parse(shoppingCartString);
+                    // 判断数组里是否有该对象
+                    var isExists=shoppingCartArr.find(value=>value.goods_id===goodsID);
+                    // 根据判定结果执行不同的业务逻辑
+                    if(isExists){
+                        isExists.count++;
+                    }else{
+                        // 3、没有就往数组里加入这个选中的对象
+                        goodsInfo.count=1;
+                        shoppingCartArr.push(goodsInfo);
+                    }
+                    // 4、转回字符串并存储到本地存储里
+                    localStorage.setItem("shoppingCart",JSON.stringify(shoppingCartArr));
+                    // 跳转到购物车页面
+                    location.href="./shoppingCart.html";
+                }
+            }
+        })();
+
+       
+    </script>
+
+</body>
+</html>

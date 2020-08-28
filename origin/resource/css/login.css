@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+}
+/* 字体红色 */
+.colorRed{
+    color: #f10215;
+}
+/* 左浮动公共类 */
+.fl{
+    float: left;
+}
+/* 右浮动公共类 */
+.fr{
+    float: right;
+}
+/* 版心 */
+.container{
+    width: 1190px;
+    margin: 0 auto;
+}
+/* 清除浮动 */
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    background-color: #fff;
+    color: #666;
+}
+
+
+/* 头部 */
+.logo{
+    position: relative;
+    width: 300px;
+    margin: 10px 0;
+    height: 60px;
+    float: left;
+}
+.welcome{
+    display: block;
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url("../images/login/welcome.png") no-repeat;
+}
+.survey{
+    position: relative;
+    color: #999;
+    float: right;
+    top: 52px;
+}
+.surveyIcon{
+    color: #f10215;
+}
+
+/* 中间 */
+/* 提示信息 */
+.content{
+    display: block;
+    clear: both;
+}
+.tipsWrapper{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #fff8f0;
+}
+.contentWrapper{
+    display: inline-block;
+    width: 90%;
+}
+.contentWrapper a{
+    color: #333;
+}
+.contentWrapper{
+    vertical-align: middle;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+}
+.tipsIcon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* 中部背景和登录界面 */
+.login{
+    background-color: #e93854;
+    height: 475px;
+    margin: 0px 0 20px;
+    position: relative;
+}
+.loginForm{
+    width: 346px;
+    position: relative;
+    top: 10px;
+    float: right;
+    background: #fff;
+    z-index: 2;
+}
+/* 登录界面 */
+.loginTab{
+    display: block;
+    height: 54px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "microsoft yahei";
+    background: #fff;
+    border-bottom: 1px solid #f4f4f4;
+    z-index: 2;
+    position: absolute;
+}
+/* 扫码登录 */
+.scanCodeLoginTab{
+    width: 173px;
+}
+.scanCodeLoginTab a{
+    width: 99%;
+    height: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    border-right: 1px solid #f4f4f4;
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+/* 账户登录 */
+.accountLoginTab{
+    width: 173px;
+    position: absolute;
+    right: 0;
+}
+.accountLoginTab a{
+    width: 99%;
+    height: 18px;
+    font-size: 18px;
+    color: #e4393c;
+    border-right: 1px solid #f4f4f4;
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+/* 登录 */
+.loginBox{
+    width: 306px;
+    padding: 20px;
+    visibility: hidden;
+}
+/* 登录背景 */
+.loginBg{
+    width: 100%;
+    height: 475px;
+    background-color: #e93854;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* 二维码 */
+.coreH{
+    width: 360px;
+    height: 35px;
+    display: block;
+    cursor: default;
+}
+/* 空 */
+.msgWrap{
+    min-height: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: auto!important;
+}
+/* 失效 */
+.msgErr{
+    position: relative;
+    background: #ffebeb;
+    color: #e4393c;
+    border: 1px solid #faccc6;
+    padding: 3px 10px 3px 40px;
+    line-height: 15px;
+    height: auto;
+    display: none;
+}
+.msgErr i{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: block;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url("../images/login/pwd-icons-new.png") no-repeat -104px -49px;
+}
+/* 账户登录界面 */
+.accountLoginForm{
+    visibility: visible;
+}
+.loginForm input{
+    overflow: hidden;
+    outline-style: none;
+}
+.formCom{
+    position: relative;
+    margin-bottom: 20px;
+}
+.loginNameLabel{
+    width: 38px;
+    height: 38px;
+    font-size: 12px;
+    border-right: 1px solid #bdbdbd;
+    background: url("../images/login/pwd-icons-new.png") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.usernameTab{
+    height: 38px;
+    width: 304px;
+    border: 1px solid #bdbdbd;
+    margin-top: 20px;
+}
+.username{
+    width: 254px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 0 10px 50px;
+    border: 0;
+    float: none;
+    overflow: hidden;
+    font-family: '\5b8b\4f53';
+}
+.loginPswLabel{
+    width: 38px;
+    height: 38px;
+    font-size: 12px;
+    border-right: 1px solid #bdbdbd;
+    background: url("../images/login/pwd-icons-new.png") no-repeat -48px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.passwordTab{
+    height: 38px;
+    width: 304px;
+    border: 1px solid #bdbdbd;
+    margin-top: 20px;
+}
+.password{
+    width: 254px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 0 10px 50px;
+    border: 0;
+    float: none;
+    overflow: hidden;
+    font-family: '\5b8b\4f53';
+}
+/* 忘记密码 */
+.safe{
+    height: 20px;
+    position: relative;
+}
+.forgetPswSafe{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+}
+/* 登录按钮 */
+.loginBtnTab{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.loginBtn{
+    width: 99%;
+    height: 32px;
+    line-height: 31px;
+    color: #fff;
+    background: #e4393c;
+    font-family: 'Microsoft YaHei';
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid #cb2a2d;
+    position: relative;
+}
+/* .loginBtn a{
+    display: block;
+    width: 302px;
+    height: 31px;
+    border: 1px solid #e85356;
+    font-size: 20px;
+} */
+/* 其它登录方式 */
+.otherLoginWay{
+    display: block;
+    line-height: 50px;
+    border-top: 1px solid #f4f4f4;
+    height: auto;
+    background-color: #fcfcfc;
+}
+.otherLoginWay ul{
+    display: block;
+    height: 30px;
+}
+.otherLoginWay ul li a{
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+}
+.qqImg{
+    display: block;
+    width: 19px;
+    height: 18px;
+    background: url("../images/login/QQ-weixin.png") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 16px;
+}
+.space{
+    width: 2px;
+    height: 10px;
+    font-size: 10px;
+    background-color: #ccc;
+    margin: 21px 10px 0;
+}
+.wxImg{
+    display: block;
+    width: 19px;
+    height: 18px;
+    background: url("../images/login/QQ-weixin.png") no-repeat -20px;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 16px;
+}
+/* 立即注册 */
+.nowRegister a{
+    color: #b61d1d;
+    font-size: 14px;
+    font-family: Arial, Verdana, 宋体;
+}
+.nowRegister i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 18px 5px 0 0;
+    background: url("../images/login/pwd-icons-new.png") no-repeat -104px -75px;
+}
+.nowRegister span{
+    font-family: Arial, Verdana, 宋体;
+}
+.loginBgImg{
+    height: 475px;
+    background-color: #e93854;
+    background: url("../images/login/loginBg.png") no-repeat;
+}

@@ -1,0 +1,175 @@
+
+
+/* 头部 */
+header{
+    height: 80px;
+    background-color: #ffac1e;
+}
+
+/* 顶部导航栏 */
+.topNav{
+    height: 32px;
+    line-height: 30px;
+    color: #999;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
+.navLocation i{
+    font-size: 14px;
+}
+.navItem{
+    padding: 0 7px;
+}
+/* 溢出省略 */
+.loginTab{
+    text-align: left;
+    margin-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 小竖线 */
+.space{
+    width: 1px;
+    height: 10px;
+    font-size: 10px;
+    background-color: #ccc;
+    margin: 11px 5px 0;
+}
+/* 手机京东和二维码定位 */
+.mobileJD{
+    position: relative;
+}
+.mobileJdImg{
+    position: absolute;
+    left: 0px;
+    top: 35px;
+    margin: 5px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+a:hover{
+    color: #e33333;
+}
+
+/* 顶部搜索栏 */
+.middle{
+    height: 140px;
+    position: relative;
+}
+.logo a{
+    display: block;
+    width: 190px;
+    height: 120px;
+    background: url("../images/index/JD-logo.png") no-repeat;
+}
+/* 搜索框 */
+.form{
+    position: absolute;
+    left: 260px;
+    top: 25px;
+    width: 546px;
+    height: 32px;
+    border: 2px solid #e2231a;
+    background: #fff;
+}
+.form .searchText{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2px 44px 2px 17px;
+    width: 425px;
+    height: 26px;
+    border: 1px solid transparent;
+    line-height: 26px;
+    font-size: 12px;
+}
+.cameraSearch{
+    position: absolute;
+    right: 75px;
+    top: 10px;
+    width: 19px;
+    height: 15px;
+    overflow: hidden;
+}
+.cameraIcon{
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 14px;
+    font-size: 20px;
+    text-align: center;
+    color: #9f9f9f;
+    cursor: pointer;
+}
+.searchBtn{
+    position: absolute;
+    right: 0;
+    width: 58px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    background-color: #e1251b;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+/* 我的购物车 */
+.mycart{
+    position: absolute;
+    right: 230px;
+    top: 25px;
+}
+.cart{
+    width: 130px;
+    height: 34px;
+    float: left;
+    line-height: 34px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e3e4e5;
+    position: relative;
+}
+.cartIcon{
+    margin-right: 13px;
+    font-size: 16px;
+}
+.shoppingCount{
+    position: absolute;
+    top: 1px;
+    left: 29px;
+    right: auto;
+    display: inline-block;
+    padding: 1px 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #e1251b;
+    border-radius: 7px;
+    min-width: 12px;
+    text-align: center;
+}
+
+/* 底部 */
+footer{
+    border-top: 1px solid #e1e1e1;
+}
+.helpWrap{
+    padding: 20px 0;
+}
+.helpBox{
+    width: 990px;
+    margin: 0 auto;
+}
+.helpList{
+    height: 160px;
+    overflow: hidden;
+}
+.helpNav{
+    width: 158px;
+    line-height: 22px;
+}
+h5{
+    color: #666;
+}

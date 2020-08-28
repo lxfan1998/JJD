@@ -1,0 +1,18 @@
+/* 底部 */
+.footerBox{
+    text-align: center;
+    padding-bottom: 30px;
+    color: #999;
+}
+.linkBox a{
+    font-family: Arial, Verdana, 宋体;
+    margin: 0 10px;
+}
+.line{
+    font-size: 12px;
+}
+.copyrigthtBox{
+    font-size: 12px;
+    font-family: Arial, Verdana, 宋体;
+    margin: 10px 0;
+}

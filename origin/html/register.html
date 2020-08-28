@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人注册</title>
+    <link rel="stylesheet" href="../resource/css/Common.css">
+    <link rel="stylesheet" href="../resource/css/footerCommon.css">
+    <link rel="stylesheet" href="../resource/css/register.css">
+</head>
+<body>
+    <!-- 弹窗 -->
+    <!-- <div class="dilog">
+        <div class="dilogTitle">
+            <span>京东用户注册协议和隐私政策</span>
+        </div>
+        <div class="dilogContent"></div>
+        <div class="dilogClose"></div>
+    </div> -->
+
+    <!-- 头部 -->
+    <header>
+        <div class="container clearfix logoTab">
+            <a href="../index.html" class="logoImg"></a>
+            <div class="logoTitle">欢迎注册</div>
+            <div class="hasAccount">
+                已有帐号？
+                <a href="../html/login.html">请登录</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 注册步骤 -->
+    <div class="container">
+        <div class="registerTab clearfix">
+            <div class="step fl">
+                <span class="stepNum stepOneNum">1</span>
+                <p class="stepText stepTextOne">填写手机号</p>
+            </div>
+            <div class="dottedLine dottedLineTwo"></div>
+            <div class="step fl stepTwoLocation">
+                <span class="stepNum stepTwoNum">2</span>
+                <p class="stepText stepTextTwo">设置账号密码</p>
+            </div>
+            <div class="dottedLine dottedLineThree"></div>
+            <div class="step fl stepThreeLocation">
+                <span class="stepNum stepThreeNum">3</span>
+                <p class="stepText stepTextThree">注册成功</p>
+            </div>
+            <div class="dottedLine"></div>
+        </div>
+    </div>
+
+    <!-- 注册操作界面 -->
+    <main>
+        <div class="container">
+            <div class="registerForm">
+                <form action="" class="registerForm" method="POST">
+                    <div class="step1Wrap">
+                        <div class="countryTab">
+                            <div class="countryNum">
+                                <label for="" id="selectCountry" class="selectCountry fl">
+                                    中国0086
+                                    <a href="#" class="moreCountry"></a>
+                                </label>
+                                <div class="inputWrap fl">
+                                    <input type="text" id="phoneNumInput" class="phoneNumInput" value placeholder="建议使用常用手机号">
+                                </div>
+                            </div>
+                            <!-- 设置密码 -->
+                            <div class="passwordWrap">
+                                <div class="passwordTab">
+                                    <label for="" id="passwordLabel" class="passwordLabel fl">
+                                        设置密码
+                                    </label>
+                                    <div class="inputWrap fl">
+                                        <input type="text" id="password" class="password" value placeholder="6~10位数字和字母">
+                                    </div>
+                                </div>
+                            </div>
+                           
+
+                            <!-- 提示信息 -->
+                            <!-- <div class="tipsWrap">
+                                <div id="verifyTips" class="verifyTips">
+                                    <i class="fl"></i>
+                                    <span class="fl verifyText">验证完成后，你可以使用该手机登录或找回密码</span>
+                                </div>
+                            </div> -->
+                            <!-- 验证按钮 -->
+                            <!-- <div class="verify">
+                                点击按钮进行验证
+                            </div>
+                            <div class="nextStep">下一步</div> -->
+
+                            <button type="button" id="submitBtn" class="submitBtn">确认</button>
+                            <div class="otherRegisterWay">
+                                <a href="#" class="otherWayItem fl">
+                                    <i class="otherWayCom companyRegister"></i>
+                                    企业用户注册
+                                </a>
+                                <a href="#" class="otherWayItem fr">
+                                    <i class="otherWayCom abrodRegister"></i>
+                                    海外用户注册
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <div class="footerBox">
+                <div class="linkBox">
+                    <a href="../index.html">关于我们</a>
+                    <span class="line">|</span>
+                    <a href="../index.html">联系我们</a>
+                    <span class="line">|</span>
+                    <a href="#">人才招聘</a>
+                    <span class="line">|</span>
+                    <a href="#">商家入驻</a>
+                    <span class="line">|</span>
+                    <a href="#">广告服务</a>
+                    <span class="line">|</span>
+                    <a href="#">手机京东</a>
+                    <span class="line">|</span>
+                    <a href="#">友情链接</a>
+                    <span class="line">|</span>
+                    <a href="#">销售联盟</a>
+                    <span class="line">|</span>
+                    <a href="#">京东社区</a>
+                    <span class="line">|</span>
+                    <a href="#">京东公益</a>
+                    <span class="line">|</span>
+                    <a href="#">English Site</a>
+                </div>
+                <div class="copyrigthtBox">
+                    Copyright&nbsp;&nbsp;&copy;2004-2020&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/request.js"></script>
+
+    <script>
+        ;(function(){
+            // 实现用户名验证功能
+            var phoneNumInput=document.getElementById("phoneNumInput");
+            var password=document.getElementById("password");
+            var submitBtn=document.getElementById("submitBtn");
+            // 定义两把锁，一把决定用户名是否验证通过，一把决定密码是否验证通过
+            // 只有当用户名正确时才允许提交，密码在这里一般不验证
+            var user_lock=false;
+            var pass_lock=false;
+            // var verify_lock=false;
+            // var nextStep_lock=false;
+
+            phoneNumInput.onblur=function(){
+                // 显示提示信息
+
+                // 获取用户输入的文本
+                var val=phoneNumInput.value;
+                // 定义正则表达式
+                var reg=/^\d{11}$/;
+                // 验证是否符合正则的规则
+                if(!reg.test(val)){
+                    phoneNumInput.style.color="rgb(252, 49, 49)";
+                    phoneNumInput.value="请输入正确的手机号！";
+                    setTimeout(function(){
+                      phoneNumInput.style.color="#666";
+                      // 防止用户第一次输入错误后直接提交的行为
+                      user_lock=false;
+                      phoneNumInput.value=val;
+                    },500);
+                    return;
+                }
+                // 检查用户名是否已存在
+                request.pPost("../php/checkPhoneNum.php",{phoneNumInput:val})
+                .then(function (data) {
+                    console.log(data);
+                    if (!data.error) {
+                        alert(data.msg);
+                        user_lock = true;
+                    } else {
+                        throw new Error(data.msg);
+                    }
+                })
+                .catch(function (err) {
+                    console.log(err);
+                    user_lock = false;
+                });
+                user_lock=true;
+            }
+
+            password.onblur=function(){
+              var val=password.value;
+              var reg=/^\w{6,10}$/;
+              if(!reg.test(val)){
+                  password.style.color="rgb(252, 49, 49)";
+                  password.value="6~10位数字和字母！";
+                    setTimeout(function(){
+                        password.style.color="#666";
+                        // 防止用户第一次输入错误后直接提交的行为
+                        pass_lock=false;
+                        password.value=val;
+                    },500);
+                    return;
+                }
+                pass_lock=true;
+            }
+
+            submitBtn.onclick=function(){
+                // 验证两把锁
+                if(!(user_lock&&pass_lock)){
+                    return;
+                }
+                // 如果通过了就发送请求
+                request.pPost("../php/register.php",{phoneNumInput:phoneNumInput.value,password:password.value})
+                .then(function(data){
+                  if(!data.error){
+                    // 提示用户
+                    alert(data.msg);
+                    // 登录成功，跳转到登录页面
+                    location.href="./login.html";
+                  }else{
+                    throw new Error(data.msg);
+                  }
+                })
+                .catch(function(e){
+                  alert("账号已存在，可直接登录");
+                  location.href="./login.html";
+                });
+            }
+        })();
+    </script>
+
+</body>
+</html>
